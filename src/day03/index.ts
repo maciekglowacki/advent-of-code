@@ -1,4 +1,5 @@
 import run from "aocrunner";
+import { range } from "../utils/index.js";
 
 const parseInput = (rawInput: string) => rawInput.split("\n");
 const part1 = (rawInput: string) => {
@@ -45,14 +46,6 @@ const part2 = (rawInput: string) => {
 
   const AT_LEAST_ONE_DIGIT_REGEX = /\d+/g;
   const ASTERISK_REGEX = /\*/g;
-
-  const range = (startIndex: number, endIndex: number) => {
-    const result = [];
-    for (let i = startIndex; i <= endIndex; i++) {
-      result.push(i);
-    }
-    return result;
-  };
 
   // Helper function to calculate the start and end indices for slicing
   const getSliceIndicesPart2 = (matchIndex: number, matchLength: number, lineLength: number) => {

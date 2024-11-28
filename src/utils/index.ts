@@ -29,3 +29,11 @@
  *     import { myUtil } from '../utils'
  *
  */
+
+export const range = (startIndex: number, endIndex: number) => {
+  const result = [];
+  for (let i = startIndex; i <= endIndex; i++) {
+    result.push(i);
+  }
+  return result;
+};
